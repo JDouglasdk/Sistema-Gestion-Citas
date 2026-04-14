@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Citas" default="default" basedir=".">
+    <description>Builds, tests, and runs the project Citas.</description>
+    
+    <!-- Propiedades de encoding -->
+    <property name="source.encoding" value="UTF-8"/>
+    <property name="javac.encoding" value="UTF-8"/>
+    
+    <import file="nbproject/build-impl.xml"/>
+    
+    <!-- Target para pre-compilación -->
+    <target name="-pre-compile">
+        <echo message="Compilando con UTF-8..."/>
+    </target>
+    
+    <!-- Target para copiar librerías después de crear el JAR -->
+    <target name="-post-jar">
+        <mkdir dir="${dist.dir}/lib"/>
+        <copy todir="${dist.dir}/lib">
+            <fileset dir="src/Libreria">
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
+        <echo message="Librerías copiadas a ${dist.dir}/lib"/>
+    </target>
+    
+</project>

@@ -1,0 +1,28 @@
+# Archivos compilados
+build/
+dist/
+*.class
+*.jar
+*.war
+
+# IDE
+.classpath
+.project
+.settings/
+.vscode/
+nbproject/private/
+nbproject/build-impl.xml~
+*.swp
+*.swo
+*~
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporal
+temp/
+tmp/
